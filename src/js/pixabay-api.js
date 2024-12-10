@@ -17,13 +17,13 @@ const API_URL = "https://pixabay.com/api/";
 
 export let initialPage = 1;
 
-export async function fetchImg(query) {
+export async function fetchImg(query, page) {
     try {
         const response = await axios.get(API_URL, {
             params: {
                 key: API_KEY,
                 q: query,
-                page: initialPage,
+                page: page,
                 per_page: 15,
                 image_type: 'photo',
                 orientation: 'horizontal',
