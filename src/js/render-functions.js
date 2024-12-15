@@ -20,7 +20,7 @@ export function changeGallery(images){
     </a>`
     ).join("");
 
-gallery.innerHTML = markup;
+gallery.insertAdjacentHTML('beforeend', markup);
 
 if (!lightbox) {
     lightbox = new SimpleLightbox('.gallery a');

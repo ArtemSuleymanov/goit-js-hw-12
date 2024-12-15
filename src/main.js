@@ -80,8 +80,11 @@ async function loadMoreImages() {
 
     const imgElement = gallery.querySelector(`.gallery-item`);
     if (imgElement) {
-        const imgHeight = imgElement.getBoundingClientRect().height;
-        window.scrollBy(0, imgHeight * 2);
+        const lastImgHeight = imgElement.getBoundingClientRect().height;
+        window.scrollBy({
+            top: lastImgHeight * 2,
+            behavior: 'smooth'
+        });
     }
 }
 
