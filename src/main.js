@@ -51,7 +51,7 @@ async function loadingImg() {
 
         if (data.hits.length < 15 || currentPage * 15 >= totalHits) {
             hasImages = false;
-            loadMoreBtn.style.display = `none`;
+            loadMoreBtn.classList.add('hidden');
             iziToast.info({
                 title: `End`,
                 message: `We're sorry, but you've reached the end of search results.`
